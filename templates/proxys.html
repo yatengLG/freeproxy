@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Proxys</title>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>Proxys</h1>
+        <p>现存有效代理{{ num }}条。</p>
+        <table class="table">
+            <tr>
+                <th>类型</th>
+                <th>ip</th>
+                <th>端口</th>
+                <th>匿名</th>
+                <th>最后验证时间</th>
+            </tr>
+            {% for proxy in proxys %}
+            <tr>
+                <td>{{ proxy.type }}</td>
+                <td>{{ proxy.host }}</td>
+                <td>{{ proxy.port }}</td>
+                {% if proxy.anonymity == 'h' %}
+                    <td>高匿</td>
+                {% elif proxy.anonymity == 'a' %}
+                    <td>匿名</td>
+                {% elif proxy.anonymity == 't' %}
+                    <td>透明</td>
+                {% else %}
+                    <td>未知</td>
+                {% endif %}
+                <td>{{ proxy.checktime }}</td>
+            </tr>
+            {%endfor%}
+        </table>
+        <p class="text-center">support by <a href="https://github.com/yatengLG/freeproxy" target="_blank">yatengLG</a></p>
+    </div>
+</body>
+</html>
