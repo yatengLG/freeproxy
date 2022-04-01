@@ -36,7 +36,7 @@ Public free proxys collected from internet.
 
 为方便使用，提供了docker镜像文件(提供了全部源码以及镜像打包文件，可放心使用)
 1) 安装[docker](https://docs.docker.com/get-docker/)
-2) 下载freeproxy安装文件[freeproxy_1_0_0.zip](https://github.com/yatengLG/freeproxy/releases/download/v1.0.0/freeproxy_1_0_0.zip)
+2) 下载freeproxy安装文件[freeproxy_1_0_0.zip](https://github.com/yatengLG/freeproxy/releases/download/v1.0.0/freeproxy_v1_0_0.zip)
 3) 解压freeproxy_1_0_0.zip
 4) 进入解压后文件夹，运行install.sh进行安装
 5) 运行start.sh开启服务。(默认端口为5000，可通过'./start.sh port'指定端口)
